@@ -1,0 +1,24 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &nums, int target)
+    {
+                int i, j, k;
+        vector<int>result;
+        int length=nums.size();
+	for (i = 0; i < length; i++)
+	{
+		k = target - nums[i];
+		for (j = i + 1; j < length; j++)
+		{
+			if (nums[j] == k)
+            { result.push_back(i);
+                    result.push_back(j);
+                    return result;
+       
+            }
+		}
+
+	}
+       return result;  
+    }
+};
